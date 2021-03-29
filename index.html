@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techdegree Project 3 - Forms</title>
+  </head>
+
+  <body>
+    <header>
+      <p class="banner">The Code Review</p>
+    </header>
+    <main>
+      <section class="top">
+        <h1>Signup for our newsletter</h1>
+        <p>Get the latest news on how your code is doing right in your inbox.</p>
+      </section>
+      <section class="middle">
+        <h3>Contact Information</h3>
+        <form action="" class="form">
+          <div class="flex-container"><span>Full Name</span><input class="field" type="text" required>
+          </div>
+          <div class="flex-container"><span>Email Address</span><input class="field" type="email" required>
+          </div>
+          <div class="flex-container"><span>Phone Number</span><input class="field" type="tel">
+          </div>
+          <div class="flex-container"><span>Street Address</span><input class="field" type="text">
+          </div>
+          <div class="flex-container"><span>City</span><input class="field" type="text">
+          </div>
+          <div class="flex-container"><span>State</span><input class="field" type="text">
+          </div>
+          <div class="flex-container"><span>Zip Code</span><input class="field" type="text">
+          </div>
+        </form>
+      </section>
+      <section class="bottom">
+        <h3>Newsletter</h3>
+        <p>Select the newsletters you would like to receive</p>
+        <form action="">
+          <ul class="check-list">
+            <li class="check-item"><input type="checkbox" name="html" id="html">HTML News</li>
+            <li class="check-item"><input type="checkbox" name="css" id="css">CSS News</li>
+            <li class="check-item"><input type="checkbox" name="js" id="js">JavaScript News</li>
+          </ul>
+        </form>
+        <p>Newsletter format</p>
+        <form action="">
+          <ul class="check-list">
+            <li class="check-item"><input type="radio" name="markup" id="markup">HTML</li>
+            <li class="check-item"><input type="radio" name="plain" id="plain">Plain Text</li>
+          </ul>
+        </form>
+
+        <form action="">
+          <p>Other topics you'd like to hear about</p>
+          </span><input type="text" name="other" id="other">
+          <button type="submit">Sign Up</button>
+        </form>
+      </section>
+    </main>
+    <footer>&copy; The Code Review</footer>
+  </body>
+
+</html>
