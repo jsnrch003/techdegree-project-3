@@ -20,7 +20,7 @@ body, input, select, textarea {
 }
 
 h2 {
-  color: #0582CA;
+  color: #eca300;
   margin-top: 1.25em;
 }
 
@@ -59,10 +59,11 @@ button {
   border-radius: 5px;
 }
 
-button:hover {
+button:hover,
+button:focus {
   background-color: #0075FF;
   transition-property: all;
-  transition-duration: 1s;
+  transition-duration: .5s;
   transition-timing-function: ease-out;
   cursor: pointer;
 }
@@ -113,16 +114,30 @@ button:hover {
   flex-direction: column;
   margin-top: .75em;
 }
+.field{
+    flex: 1;
+}
 
-.field {
+.field,
+.zip-field {
   background-color: #f3f3f3;
   border: none;
   border-radius: 5px;
   margin: 1em 0;
   height: 4em;
-  padding: 1.5em;
-  flex: 1;
+  padding: 0 1.5em;
   color: #666;
+}
+
+.field:focus,
+.zip-field:focus,
+.comments textarea:focus{
+  background-color:#0075FF;
+  color: #fff;
+  border: none;
+    transition-property: all;
+  transition-duration: .25s;
+  transition-timing-function: ease-out;
 }
 
 ::placeholder {
@@ -133,19 +148,12 @@ button:hover {
   color: #8a8a8a;
 }
 
+
+
 input#zip {
   width: 10em;
 }
 
-.zip-field {
-  background-color: #f3f3f3;
-  border: none;
-  border-radius: 5px;
-  margin: 1em 0;
-  height: 4em;
-  padding: 1.5em;
-  color: #666;
-}
 
 /* ======== Newsletter ======== */
 
@@ -160,23 +168,26 @@ input#zip {
 .radios li:last-child, .checkboxes li:last-child {
   padding-bottom: .5em;
 }
-
+.comments {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 .comments textarea {
-  background-color: #f3f3f3;
-  border: none;
-  border-radius: 10px;
-  font-size: 1em;
-  padding: 1em;
-  width: 100%;
-  height: 120px;
-  color: #666;
-  margin-left: -.5em;
-  margin-top: 1em;
+    background-color: #f3f3f3;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    padding: 1em;
+    width: 100%;
+    height: 120px;
+    color: #666;
+    margin-top: .5em;
 }
 
 .comments span {
   display: block;
-  padding-left: .5em;
+  /* padding-left: .5em; */
   padding-top: .5em;
 }
 
@@ -204,4 +215,12 @@ footer {
   body {
     max-width: 800px;
   }
+}
+  }
+}
+}
+  }
+}
+}
+}
 }
