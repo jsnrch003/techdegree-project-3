@@ -16,16 +16,16 @@
     <span class="title">The Code Review</span>
   </header>
   <main>
-    <section class="main-top">
+    <section class="cta">
       <h2>Sign up for our newsletter</h2>
       <p>Get the latest news on how your code is doing right in your inbox.</p>
     </section>
-    <form action="#" class="main-middle">
-      <fieldset class="contact-info">
+    <form action="#" class="contact-info">
+      <fieldset>
         <legend>
           <h2>Contact Information</h2>
         </legend>
-        <div class="contact-form">
+        <div class="contact-fields">
           <div class="flex-container">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" class="field" placeholder="Required" required>
@@ -36,7 +36,7 @@
           </div>
           <div class="flex-container">
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" class="field">
+            <input type="tel" id="phone" name="phone" class="field" placeholder="Required" required>
           </div>
           <div class="flex-container">
             <label for="street">Street Address</label>
@@ -105,7 +105,7 @@
           </div>
           <div class="flex-container">
             <label for="zip">Zip Code</label>
-            <input type="text" id="zip" name="zip" maxlength="5" class="field">
+            <input type="text" id="zip" name="zip" maxlength="5" class="zip-field" placeholder="Required" required>
           </div>
         </div>
       </fieldset>
@@ -145,8 +145,8 @@
             </label>
             <textarea name="comments" id="comments"></textarea>
           </div>
-          <button type="submit">Sign Up</button>
         </fieldset>
+        <button type="submit">Sign Up</button>
       </section>
     </form>
   </main>

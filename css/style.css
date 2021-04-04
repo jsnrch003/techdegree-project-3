@@ -1,21 +1,36 @@
+/* ======== General Styles ======== */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  background-color: #006494;
+}
+
 body {
-  background-color: #fff;
+  background-color: #003554;
 }
 
 body, input, select, textarea {
   font-family: 'Merriweather', sans-serif;
-  color: #999999;
+  color: #ababab;
 }
 
 h2 {
-  color: #003554;
+  color: #0582CA;
   margin-top: 1.25em;
+}
+
+main {
+  width: 90%;
+  margin: auto;
+}
+
+fieldset {
+  border: none;
 }
 
 li {
@@ -25,56 +40,78 @@ li {
 }
 
 label {
-  flex: 1;
-}
-
-.radios li:last-child, .checkboxes li:last-child {
-  padding-bottom: .5em;
+  flex-basis: 25%;
 }
 
 p {
   line-height: 1.5;
 }
 
+button {
+  width: 100%;
+  margin-top: 1.5em;
+  padding: 1.15em 2em;
+  font-size: 1.25em;
+  font-family: 'Merriweather';
+  background-color: #004D74;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0075FF;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+  cursor: pointer;
+}
+
+/* ======== Header ======== */
+
 .banner {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #004D74;
+  background: rgb(0, 117, 255);
+  background: linear-gradient(180deg, rgba(0, 117, 255, 1) 50%, rgba(0, 53, 84, 1) 100%);
   color: #fff;
   text-transform: uppercase;
   font-size: 1.5em;
-  padding: 1.25em 0;
+  padding: 1.5em 0;
 }
 
-main {
-  width: 90%;
-  margin: auto;
+.title {
+  text-shadow: 3px 3px 4px #0000009e;
 }
 
-.main-middle {
-  border-top: 3px solid #004D74;
+/* ======== Call To Action ======== */
+
+.cta {
+  text-align: center;
+  border-bottom: 5px solid #006494;
+  height: 8em;
+}
+
+.cta p {
+  padding-top: .5em;
+}
+
+/* ======== Contact Information ======== */
+
+.contact-info, .main-bottom {
+  border-top: 3px solid #006494;
   margin-top: 4px;
 }
 
-.contact-info, .newsletter {
-  border: none;
-}
-
-.contact-form {
+.contact-fields {
   margin: 1.5em 0;
 }
 
-input#zip {
-  width: 10em;
-}
-
-::placeholder {
-  text-align: right;
-  font-style: italic;
-  font-size: .8em;
-  font-family: 'Merriweather';
-  color: #ababab;
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: .75em;
 }
 
 .field {
@@ -83,10 +120,34 @@ input#zip {
   border-radius: 5px;
   margin: 1em 0;
   height: 4em;
-  padding: 1em;
-  flex: 2;
-  color: #555555;
+  padding: 1.5em;
+  flex: 1;
+  color: #666;
 }
+
+::placeholder {
+  text-align: right;
+  font-style: italic;
+  font-size: 1em;
+  font-family: 'Merriweather';
+  color: #8a8a8a;
+}
+
+input#zip {
+  width: 10em;
+}
+
+.zip-field {
+  background-color: #f3f3f3;
+  border: none;
+  border-radius: 5px;
+  margin: 1em 0;
+  height: 4em;
+  padding: 1.5em;
+  color: #666;
+}
+
+/* ======== Newsletter ======== */
 
 .newsletter p {
   padding: 1.5em .25em;
@@ -96,27 +157,8 @@ input#zip {
   padding: 0.5em;
 }
 
-.flex-checkbox, .flex-radio {
-  margin: .5em 0;
-}
-
-footer {
-  text-align: center;
-  padding: 5em;
-}
-
-.main-top {
-  text-align: center;
-  border-bottom: 5px solid #004D74;
-  height: 8em;
-}
-
-.main-top p {
-  padding: 1em;
-}
-
-.main-bottom {
-  border-top: 3px solid #004D74;
+.radios li:last-child, .checkboxes li:last-child {
+  padding-bottom: .5em;
 }
 
 .comments textarea {
@@ -127,7 +169,7 @@ footer {
   padding: 1em;
   width: 100%;
   height: 120px;
-  color: #555;
+  color: #666;
   margin-left: -.5em;
   margin-top: 1em;
 }
@@ -138,38 +180,23 @@ footer {
   padding-top: .5em;
 }
 
-button {
-  width: 100%;
-  margin-top: 2em;
-  padding: 1.15em 2em;
-  font-size: 1.25em;
-  font-family: 'Merriweather';
-  background-color: #0075FF;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
+/* ========Footer ======== */
+
+footer {
+  text-align: center;
+  padding: 2em;
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: column;
-}
+/* ======== Media Queries ======== */
 
 @media screen and (min-width: 768px) {
-  html {
-    background-color: #006494;
-  }
   body {
     max-width: 75%;
     margin: auto;
   }
   .flex-container {
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-  }
-  input#zip {
-    width: 10em;
   }
 }
 
