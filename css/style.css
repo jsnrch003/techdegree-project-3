@@ -117,7 +117,7 @@ button:hover, button:focus {
 }
 
 .field {
-  flex-basis: 70%;
+  flex: 1;
 }
 
 .field, .zip-field {
